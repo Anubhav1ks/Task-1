@@ -1,0 +1,39 @@
+<%- include('partials/header'); -%>
+<h2 style="text-align:center;"><--------------Member Details-----------------></h2>
+<div class="detail-row">
+  <h2>Name :</h2>
+  <h3 style="float:right;margin-left: 100px;"><%=Name%></h3>
+</div>
+<div class="detail-row">
+  <h2>Email :</h2>
+  <h3 style="float:right;margin-left: 100px;"><%=Email%></h3>
+</div>
+<div class="detail-row">
+  <h2>Amount :</h2>
+  <h3 style="float:right;margin-left: 100px;"><%=Amount%></h3>
+</div>
+<h2 style="text-align:center;"><--------------Transaction Details-----------------></h2>
+  <table style="width:100%">
+    <tr>
+      <th><h3>Sender Email</h3></th>
+      <th><h3>Reciver Email</h3></th>
+      <th><h3>Amount </h3></th>
+      <th><h3>Status</h3></th>
+    </tr>
+    <%  alltransaction.forEach(function(history){ %>
+      <tr>
+        <th><h5><%=history.SenderEmail%></h5></th>
+        <th><h5><%=history.RecicerEmail%></h5></th>
+        <th><h5><%=history.AmountSend%></h5></th>
+        <th><h5><%=history.status%></h5></th>
+
+      </tr>
+
+      <% }) %>
+
+  </table>
+
+
+
+
+<%- include('partials/footer'); -%>

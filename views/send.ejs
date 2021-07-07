@@ -1,0 +1,29 @@
+<%- include('partials/header'); -%>
+
+<table style="width:100%">
+  <tr>
+    <th><h3>Name</h3></th>
+    <th><h3>Email</h3></th>
+    <%# <th><h3>Mobile no.</h3></th> %>
+    <th><h3>Balance</h3></th>
+
+    <%# <th></th> %>
+  </tr>
+  <%  member.forEach(function(person){ %>
+    <tr>
+      <th><h5><a href="/<%=person.email%>"><%=person.name%></a></h5></th>
+      <th><h5><a href="/<%=person.email%>"><%=person.email%></a></h5></th>
+      <th><h5><a href="/<%=person.email%>"><%=person.amount%></a></h5></th>
+      <th><button type="button" id="<%=person.email%>"  onClick="reply_click(this.id)" class="send btn btn-outline-light download-butten"> <a href="/reciver">Send</a></button></th>
+    </tr>
+<% }) %>
+
+</table>
+
+<%# <button type="button" class="btn btn-outline-light btn-lg download-butten"> <a href="/new">add new member</a> </button> %>
+
+
+
+
+
+<%- include('partials/footer'); -%>
